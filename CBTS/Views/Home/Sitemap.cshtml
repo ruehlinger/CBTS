@@ -1,0 +1,122 @@
+﻿@using System.Web.Hosting
+@using CBTS.Models
+@{
+    ViewBag.Title = "VBA CBTS";
+    var tilestyle = ViewBag.Dev ? "thumbnail" : "thumbnaildisabled thumbnail disabled";
+
+}
+
+@section styles
+{
+    }
+   <!-- <div class="indxLft2">
+        <div class="overview">
+            <h2>Calendar</h2>
+            <br />
+            <p>
+                The Calendar page hosts events that are upcoming
+            </p>
+        </div>
+    </div>-->
+   
+
+
+<div class="pagecontent1">
+
+ 
+    <br />
+        <p>Home > Sitemap</p>
+
+    <h3>Sitemap</h3>
+    <br />
+    <h4><u><strong>Top Navigation</strong></u></h4>
+    <br />
+    <p><a href="~/Home/BriefingTools/">Briefing Tools</a></p>
+    <p><a href="~/Home/ProjectStatus/">Project Status</a></p>
+    <p><a href="#">Resources</a></p>
+    <p><a href="~/Home/Glossary/">Glossary</a></p>
+    <p><a href="~/Home/Faqs">FAQs</a></p>
+    <p><a href="~/Home/Calendar/">Calendar</a></p>
+    <p><a href="#">Contact Us</a></p>
+    <br />
+
+   <h4><u><strong>Left Navigation</strong></u></h4>
+    <br />
+
+    <p><strong>My Role Is</strong></p>
+    <p style="text-indent: 10px;"><a href="~/Home/Employee">Employee</a></p>
+    <p style="text-indent: 10px;"><a href="~/Home/TrainingManager">Training Manager (TM)</a></p>
+    <p style="text-indent: 10px;"><a href="~/Home/FLSupervisor">First Line Supervisor</a></p>
+    <p style="text-indent: 10px;"><a href="#">Senior Management</a></p>
+
+    <p><strong>Competency Model Reports by Service</strong></p>
+     <p style="text-indent: 10px;">Compensation Service</p>
+       <p style="text-indent: 20px;"><a href="~/Documents/VSR_Technical_Competencies.pdf" target="_blank">Veterans Service Representative (VSR)</a></p>
+       <p style="text-indent: 20px;"><a href="~/Documents/RVSR_Technical_Competencies.pdf" target="_blank">Rating Veterans Service Representative (RVSR)</a></p>
+       <p style="text-indent: 20px;"><a href="~/Documents/DRO_Technical_Competencies.pdf" target="_blank">Decision Review Officer (DRO)</a></p> 
+     
+    <p style="text-indent: 10px;">Pension and Fiduciary Services (P&F)</p>
+       <p style="text-indent: 20px;"><a href="~/Documents/PMC-VSR_Technical_Competencies.pdf" target="_blank">Pension Management Center Veterans Service Representative (PMC VSR)</a></p>
+       <p style="text-indent: 20px;"><a href="~/Documents/LIE_Technical_Competencies.pdf" target="_blank">Legal Instruments Examiner (LIE)</a></p>
+       <p style="text-indent: 20px;"><a href="~/Documents/FE_Technical_Competencies.pdf" target="_blank">Field Examiner (FE)</a></p> 
+     
+    <p style="text-indent: 10px;">Benefits Assistance Service (BAS)</p>
+       <p style="text-indent: 20px;"><a href="~/Documents/PCR_Technical_Competencies.pdf" target="_blank">Public Contact Representative (PCR)</a></p>
+
+    <p style="text-indent: 10px;">Education Service (EDU)</p>
+       <p style="text-indent: 20px;"><a href="~/Documents/VCE_Technical_Competencies.pdf" target="_blank">Veterans Claims Examiner</a></p>
+
+    <p style="text-indent: 10px;">Insurance (INS)</p>
+       <p style="text-indent: 20px;"><a href="~/Documents/VCE-LC_Technical_Competencies.pdf" target="_blank">Veteran's Claims Examiner - Live Claims (VCE-LC)</a></p>
+       <p style="text-indent: 20px;"><a href="~/Documents/VCE-DC_Technical_Competencies.pdf" target="_blank">Veteran's Claims Examiner - Death Claims (VCE-DC)</a></p>
+       <p style="text-indent: 20px;"><a href="~/Documents/INS_Technical_Competencies.pdf" target="_blank">Insurance Specialist (INS Specialist)</a></p> 
+
+    <p style="text-indent: 10px;">Loan Guarantee (LGY)</p>
+       <p style="text-indent: 20px;"><a href="~/Documents/Loan_Technician_Servicing_Technical_Competencies.pdf" target="_blank">Loan Technician (Servicing)</a></p>
+       <p style="text-indent: 20px;"><a href="~/Documents/Loan_Technician_Production_Technical_Competencies.pdf" target=" _blank">Loan Technician (Production)</a></p>
+       <p style="text-indent: 20px;"><a href="~/Documents/Staff_Appraiser_Technical_Competencies.pdf" target="_blank">Staff Appraiser</a></p> 
+       <p style="text-indent: 20px;"><a href="~/Documents/SAH_Agent_Technical_Competencies.pdf" target="_blank">Specially Adapted Housing (SAH) Agent</a></p> 
+
+    <p style="text-indent: 10px;">Vocational Rehabilitation and Employment (VR&E)</p>
+       <p style="text-indent: 20px;"><a href="~/Documents/VRC_Technical_Competencies.pdf" target="_blank">Vocational Rehabilitation Counselor (VRC)</a></p>
+       <p style="text-indent: 20px;"><a href="~/Documents/EC_Technical_Competencies.pdf" target="_blank">Employment Coordinator (EC)</a></p>
+
+    <p><strong>Diagnostic Assessments by Service</strong></p>
+    <p style="text-indent: 10px;"><a href="#">Compensation Service</a></p>
+    <p style="text-indent: 10px;"><a href="#">Pension and Fiduciary Services (P&F)</a></p>
+    <p style="text-indent: 10px;"><a href="#">Benefits Assistance Service (BAS)</a></p>
+    <p style="text-indent: 10px;"><a href="#">Education Service (EDU)</a></p>
+    <p style="text-indent: 10px;"><a href="#">Insurance (INS)</a></p>
+    <p style="text-indent: 10px;"><a href="#">Loan Guarantee (LGY)</a></p>
+    <p style="text-indent: 10px;"><a href="#">Vocational Rehabilitation and Employment (VR&E)</a></p>
+
+    <p><strong>Badges</strong></p>
+
+
+    </div>
+
+    @section scripts
+    {
+        <script language="javascript">
+            $(document).ready(function() {
+                var $lft = $(".indxLft");
+                var $rght = $(".indxRight");
+                var hl = $lft.height();
+                var hr = $rght.height();
+                var bp;
+
+                if (hl > hr) {
+
+                    $rght.height(hl);
+
+                } else if (hr > hl) {
+                    bp = hr - hl;
+                    $lft.height(hr);
+                    $lft.css("background-position-y", bp);
+                }
+
+            });
+
+        </script>
+
+    }

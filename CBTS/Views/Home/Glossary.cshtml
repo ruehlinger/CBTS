@@ -1,0 +1,278 @@
+﻿@using System.Web.Hosting
+@using CBTS.Models
+@{
+    ViewBag.Title = "VBA CBTS";
+    var tilestyle = ViewBag.Dev ? "thumbnail" : "thumbnaildisabled thumbnail disabled";
+
+}
+
+@section styles
+{
+    }
+    <div class="indxLft2">
+        <div class="overview" id="home">
+            <h2>Glossary</h2>
+            <br />
+            <p>
+                A list of terms and definitions related to the Competency-based Training System (CBTS).
+            </p>
+        </div>
+    </div>
+   
+
+
+<div class="pagecontent1">
+    <br />
+    <p align="center"><a href="#GD">General Definitions</a> | <a href="#AD">Analysis Definitions</a> | <a href="#CD">Competency Definitions</a> | <a href="#TD">Training Definitions</a></p>
+    <h3 id="GD">General Definitions</h3>
+    <br />
+    <div class="glossarytable">
+        <table>
+            <tr>
+                <td width="15%"><strong>Accomplished Performer (AP)</strong></td>
+                <td>An individual who possesses expertise (mastery-level) that spans an entire job position. This individual can perform/demonstrate/teach complicated processes seamlessly without the need for references or confirmation from other APs. </td>
+
+            </tr>
+
+            <tr>
+                <td><strong>Employee Development and Training (ED&T)</strong></td>
+                <td>The mission of ED&T is to ensure that the Veterans Benefits Administration (VBA) develops, implements, and evaluates innovative learning programs and practices that promote a systematic and comprehensive approach to training and developing VBA employees in order to provide quality, seamless service to Veterans.</td>
+
+            </tr>
+            <tr>
+                <td><strong>Knowledge, Skills, and Abilities (KSAs)</strong></td>
+                <td>The job attributes and qualifications based on service, education, and/or training that are required for success in a position. KSAs are derived from job and task analyses.</td>
+
+            </tr>
+            <tr>
+                <td><strong>Life Cycle Maintenance/Management (LCM)</strong></td>
+                <td>A process that ensures all components of the VBA’s Competency-based Training System are monitored and updated in a timely manner. This process encourages feedback from employees and senior management to ensure that training, assessments, databases, and other system components are updated when requirements change. </td>
+
+            </tr>
+
+            <tr>
+                <td><strong>Subject Matter Expert (SME)</strong></td>
+                <td>An individual who possesses expertise in a particular subject area or domain. This individual performs at a high level but may need to consult references and other SMEs for confirmation of tasks that are not frequently performed.</td>
+
+            </tr>
+
+            <tr>
+                <td><strong>Technical Training and Evaluation (TT&E)</strong></td>
+                <td>Within ED&T, TT&E’s mission is to improve VBA performance in critical and specific job tasks. TT&E accomplishes this mission via application of needs assessment, instructional systems development, and performance evaluation. TT&E produces and supports training systems and performance support products for national delivery via a wide variety of media, delivery systems, and instructional methods.</td>
+
+            </tr>
+        </table>
+        <p><a href="#home">Back to top</a></p>
+
+    </div>
+
+    <h3 id ="AD">Analysis Definitions</h3>
+    <br />
+    <div class="glossarytable">
+        <table>
+            <tr>
+                <td width="28%"><strong>Curriculum Analysis</strong></td>
+                <td>The process of analyzing an aggregate course of study or training program to identify gaps or issues related to sequencing, currency, or adequacy of courses and materials.</td>
+
+            </tr>
+
+            <tr>
+                <td><strong>Job Analysis (JA)</strong></td>
+                <td>The process for identifying a job’s duties, tasks, competency linkages, and other job environment factors.</td>
+
+            </tr>
+            <tr>
+                <td><strong>Job Task Analysis (JTA)</strong></td>
+                <td>A combined job and task analysis that identifies job’s duties, tasks, competency linkages, other job environment factors, procedural and mental activities, task durations, task frequency, task allocation, task complexity, environmental conditions, and any other unique factors related to that task.</td>
+
+            </tr>
+            <tr>
+                <td><strong>Task Analysis</strong></td>
+                <td>The process for identifying how a task is accomplished, including a detailed description of both procedural and mental activities, task durations, task frequency, task allocation, task complexity, environmental conditions, and any other unique factors related to that task.</td>
+
+            </tr>
+
+        </table>
+        <p><a href="#home">Back to top</a></p>
+
+    </div>
+
+    <h3 id="CD">Competency Definitions</h3>
+    <br />
+    <div class="glossarytable">
+        <table>
+            <tr>
+                <td width="28%"><strong>Behavioral Indicator</strong></td>
+                <td>Behavioral Indicators are observable and help to describe the full range of proficiency within a competency. They further define Competency Proficiency Levels and Ratings.</td>
+
+            </tr>
+
+            <tr>
+                <td><strong>Competency</strong></td>
+                <td>A competency is a standardized requirement for an individual to properly perform a specific job or role. A competency is observable, measurable, and typically includes a combination of the knowledge, skills, abilities, behaviors, and other characteristics (KSAOs) required to improve performance.</td>
+
+            </tr>
+            <tr>
+                <td><strong>Competency Model</strong></td>
+                <td>A competency model is a collection of the knowledge, skills, abilities, behaviors, and other characteristics (KSAOs) that an individual requires to perform work roles or occupational functions successfully.</td>
+
+            </tr>
+            <tr>
+                <td><strong>Competency Proficiency Ratings</strong></td>
+                <td>Competency Proficiency Ratings define the level of proficiency (i.e. standard) an individual should demonstrate in a particular competency. These ratings vary by position and Position Proficiency Level. The Competency Proficiency Ratings are: 
+                <ol>
+                    <li>Basic</li>
+                    <li>Foundational</li>
+                    <li>Intermediate</li>
+                    <li>Advanced</li>
+                    <li>Expert</li>
+
+                </ol>
+                
+                
+                </td>
+
+            </tr>
+            <tr>
+                <td><strong>Competency Profile</strong></td>
+                <td>A Competency Profile contains the competency definition/description, behavioral indicators, proficiency ratings, proficiency levels, and the knowledge, skills, abilities, behaviors, and other characteristics (KSAOs) that make up a competency. </td>
+            </tr>
+            <tr>
+                <td><strong>Diagnostic Assessment</strong></td>
+                <td>This type of assessment is used to determine the current state of an individual’s competency in a particular area.</td>
+            </tr>
+
+            <tr>
+                <td><strong>Position Proficiency Level</strong></td>
+                <td>Position Proficiency Levels specify the types of activities performed and the level of supervision required for the competency. <br />
+                The Position Proficiency Levels are:
+
+                <ul>
+                    <li>Entry (E)</li>
+                    <li>Apprentice/Intermediate (A/I)</li>
+                    <li>Journey (J)</li>
+                </ul>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>VBA Competency-based Training System</strong></td>
+                <td>
+                    The VBA’s Competency-based Training System (CBTS) ensures the technical training for each employee is aligned with the competencies that have been identified for the position, at the appropriate level, and that required training, including performance support, is specifically targeted to meet current job requirements and training needs. The VBA CBTS also includes diagnostic assessments that provide guidance and remediation recommendations to help close performance gaps. Use of the VBA CBTS ensures alignment between organizational and employee goals.
+                </td>
+            </tr>
+
+        </table>
+        <p><a href="#home">Back to top</a></p>
+
+    </div>
+
+    <h3 id="TD">Training Definitions</h3>
+    <br />
+    <div class="glossarytable">
+        <table>
+            <tr>
+                <td width="28%"><strong>Electronic Performance Support System (EPSS)</strong></td>
+                <td>Online (electronic) job aids provide just-in-time support that assists with the completion of a task without the need for formalized training or instructor intervention.</td>
+
+            </tr>
+
+            <tr>
+                <td><strong>Enabling Learning Objective (ELO)</strong></td>
+                <td>A statement in behavioral terms that describes what is expected of an employee when demonstrating the knowledge and skill necessary for achievement of a Terminal Learning Objective (TLO) or another ELO. The ELO helps to track competence through the inclusion of three components; condition, behavior, and standards.</td>
+
+            </tr>
+            <tr>
+                <td><strong>Instructor-led Web-Based Training (IWT)</strong></td>
+                <td>Synchronous online training that allows learners and the instructor to be in separate locations. In addition to instructor/learner participation, IWT also incorporates Course Advocates as facilitators.</td>
+
+            </tr>
+            <tr>
+                <td><strong>Learning Object (LO)</strong></td>
+                <td>
+                    A collection of training items, practice items, and assessment items that are combined based on a single enabling learning objective (ELO). These discrete, self-contained units provide focused training that enables the learner to get the training required based on the results of an assessment, employee goals, or supervisor recommendations. 
+                </td>
+
+            </tr>
+            <tr>
+                <td><strong>Prerequisite</strong></td>
+                <td>A requirement that must be completed before another event can take place. Training often contains prerequisites to ensure that the learner has the required knowledge before advancing to higher level skills.</td>
+            </tr>
+            <tr>
+                <td><strong>Terminal Learning Objective (TLO)</strong></td>
+                <td>The TLO is the main observable and measureable goal (objective) of a lesson and describes the expected level of performance by the end of the course/training. Enabling Learning Objectives (ELOs) further define the TLO.</td>
+            </tr>
+
+            <tr>
+                <td><strong>Training and Performance Support System (TPSS)</strong></td>
+                <td>
+                    An online unit of instruction that includes performance-based instruction, practice, and assessment. It also includes references to job-aids and other performance support tools that are required to teach complex tasks.
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>VBA Learning Catalog</strong></td>
+                <td>
+                    Online depository of information regarding VBA training materials.
+                   
+
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>VBA Schoolhouse</strong></td>
+                <td>
+                    An online training platform for VBA employees and instructors. It provides easy access to:
+
+                    <ul>
+                        <li>Course Schedules</li>
+                        <li>Course Schedules</li>
+                        <li>Training and Performance Support System (TPSS) modules</li>
+                        <li>The “virtual classroom”—Where students and instructors participate in live Instructor-led Web-based Training (IWT) lectures, discussions, and activities</li>
+                    </ul>
+
+
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>Web-Based Training (WBT)</strong></td>
+                <td>
+                    Sometimes called e-learning, is anywhere, anytime instruction delivered over the Internet or an organization’s intranet to browser-equipped learners. There are two primary models of WBT: synchronous (instructor-facilitated) and asynchronous (self-directed, self-paced).
+                </td>
+            </tr>
+
+        </table>
+        <p><a href="#home">Back to top</a></p>
+
+    </div>
+   
+
+    </div>
+
+    @section scripts
+    {
+        <script language="javascript">
+            $(document).ready(function() {
+                var $lft = $(".indxLft");
+                var $rght = $(".indxRight");
+                var hl = $lft.height();
+                var hr = $rght.height();
+                var bp;
+
+                if (hl > hr) {
+
+                    $rght.height(hl);
+
+                } else if (hr > hl) {
+                    bp = hr - hl;
+                    $lft.height(hr);
+                    $lft.css("background-position-y", bp);
+                }
+
+            });
+
+        </script>
+
+    }

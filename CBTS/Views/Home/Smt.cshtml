@@ -1,0 +1,74 @@
+﻿@using System.Web.Hosting
+@using CBTS.Models
+@{
+    ViewBag.Title = "VBA CBTS";
+    var tilestyle = ViewBag.Dev ? "thumbnail" : "thumbnaildisabled thumbnail disabled";
+
+}
+
+@section styles
+{
+    }
+    <div class="indxLft">
+        <div class="overview">
+            <h2>OVERVIEW</h2>
+            <br />
+            <p>
+                The Supervisory and Management Training (SMT) Program is a blended two-week cohort training providing new VBA supervisors with the foundation and tools needed for a successful transition into supervisory leadership roles.  SMT consists of five (5) Instructor-led, Web-based Training (IWT) modules to increase their leadership awareness, and a one-week Residential session focusing on managerial technical training held at the VBA Professional Development Academy in Baltimore, Maryland. A pre-requisite for enrollment into SMT is completion of the 20-hour New Supervisor Soft-Skills Training (NSSST) Program; it consists of five (5) self-paced modules within the VA Talent Management System (TMS).  A pre- and post-test is administered in NSSST and the SMT Residential session to assess the degree of learning.
+            </p>
+        </div>
+    </div>
+   
+
+
+<div class="pagecontent">
+    <h3>Curriculum:</h3>
+    <h4>IWT Modules:</h4>
+    <p>♦ Transitioning to Leadership and Leadership vs. Management ♦ Planning, Assisting, Controlling, &
+  Evaluating (P.A.C.E.) and Delegation ♦ Motivation & Empowerment and Motivating Your Employees
+        ♦ Setting Goals and Providing Feedback ♦ Defining Your Personal Leadership Style and Time
+  Management
+</p>
+    <h4>Residential:</h4>
+    <p>
+        ♦ Leadership Roles ♦ Emotional Intelligence ♦ 4 Disciplines of Execution ♦ Applying Equal Employment
+        Opportunity (EEO) ♦ Human Resource Management: Labor Relations and Employee Relations
+        ♦ Performance Management
+
+    </p>
+
+    <h3>Requirements:</h3>
+
+    <p>♦ Complete all five (5) self-paced modules of the NSSST as a pre-requisite for enrollment into SMT-IWT. <br/>♦ Complete all five (5) IWT modules as a pre-requisite for admission into the Residential session. ♦ Complete the SMT five (5) day Residential session.</p>
+
+    <h3>Contact Us:</h3>
+
+    <p>For more information please contact the SMT Program Manager, Tony Hill, at 410-230-4450.</p>
+
+    </div>
+
+    @section scripts
+    {
+        <script language="javascript">
+            $(document).ready(function() {
+                var $lft = $(".indxLft");
+                var $rght = $(".indxRight");
+                var hl = $lft.height();
+                var hr = $rght.height();
+                var bp;
+
+                if (hl > hr) {
+
+                    $rght.height(hl);
+
+                } else if (hr > hl) {
+                    bp = hr - hl;
+                    $lft.height(hr);
+                    $lft.css("background-position-y", bp);
+                }
+
+            });
+
+        </script>
+
+    }

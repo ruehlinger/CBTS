@@ -1,0 +1,112 @@
+﻿@using System.Web.Hosting
+@using CBTS.Models
+@{
+    ViewBag.Title = "VBA CBTS";
+    var tilestyle = ViewBag.Dev ? "thumbnail" : "thumbnaildisabled thumbnail disabled";
+
+}
+
+@section styles
+{
+    @*<style>
+        .indxRight {
+            background: Url('@Url.Content("~/Images/bg-explore-form.jpg")') no-repeat left 0 ;
+            font-size: 2.3em;
+            width: 276px;
+            text-align: center;
+            float: right;
+        }
+    </style>*@
+
+    }
+    <div class="indxLft">
+        <div class="overview">
+            <h2>OVERVIEW</h2>
+            <br />
+            <p>
+                The Emerging Leaders Program (ELP) is designed as an Area leadership development program for current GS7-9 employees within various business lines of the Veterans Benefits Administration (VBA).  This leadership program seeks to promote and enhance leadership characteristics within the individual, as well as to strengthen the connection between their foreseen leadership roles and the systems through which they influence organizational operations.  In addition, the Tuckman Group & Team Development Model is infused throughout the curriculum which highlights the importance of communication, collaboration, and trust between management and fellow employees as precepts to leadership.
+            </p>
+        </div>
+    </div>
+    <div class="indxRight">
+        <div class="learning_objectives">
+            <h2>Learning Objectives</h2>
+            <ul class="list-unstyled">
+                <li>
+                    Describe and explain the VA leadership core competencies and how they shape the organization.
+                </li>
+                <li>Create an individual development plan using the knowledge gained from personal experiences,
+      professional growth, mentoring, and the shadowing experience.
+
+</li>
+                <li>
+                    Enhance leadership skills through participation in residential and virtual training sessions, as well as
+                    group collaboration on a team project.
+
+                </li>
+                <li>
+                    Identify and discuss the stages of group and team development as a means to foster communication,
+                    collaboration, and trust between management and employees.
+                </li>
+            </ul>
+
+        </div>
+        
+</div>
+
+
+<div class="pagecontent">
+    
+    <h3>Foundational Models:</h3>
+
+    <p>
+        Tuckman Group & Team Development Model (B. Tuckman & M. Jensen)
+    </p>
+
+    <h3>Foundational Text:</h3>
+
+    <p><i>Discovering the Leader In You</i> (R. Lee & S. King)</p>
+
+
+        
+
+    <h3>Curriculum:</h3>
+   
+    <p>♦ Tuckman Stages of Group & Team Development ♦ VA Leadership Core Competencies ♦ VBA-Focused Leadership Training ♦ Interviewing/Briefing Techniques ♦ Collaborative Communication ♦ Organizational Change ♦ Personal Goal Setting
+</p>
+
+    <h3>Requirements:</h3>
+
+    <p>♦ Foundations Week ♦ Executive Week ♦ Submit Personal Mission Statement ♦ Submit Individual Development Plan ♦ Participate in a Mentoring Relationship ♦ Attend a Leadership Briefing ♦ Complete Foundational Text Review ♦ Complete a Shadowing Experience ♦ Complete Virtual Training Courses ♦ Present a Group Project ♦ Submit a Project Paper</p>
+
+    <h3>Contact Us:</h3>
+
+    <p>For more information please contact the ELP Program Manager, Jamie Gerwitz, at 202-461-9868.</p>
+
+    </div>
+
+    @section scripts
+    {
+        <script language="javascript">
+            $(document).ready(function() {
+                var $lft = $(".indxLft");
+                var $rght = $(".indxRight");
+                var hl = $lft.height();
+                var hr = $rght.height();
+                var bp;
+
+                if (hl > hr) {
+
+                    $rght.height(hl);
+
+                } else if (hr > hl) {
+                    bp = hr - hl;
+                    $lft.height(hr);
+                    $lft.css("background-position-y", bp);
+                }
+
+            });
+
+        </script>
+
+    }

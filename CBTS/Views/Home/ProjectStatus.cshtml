@@ -1,0 +1,134 @@
+<<<<<<< .mine
+﻿@using System.Web.Hosting
+@using CBTS.Models
+@{
+    ViewBag.Title = "VBA CBTS";
+    var tilestyle = ViewBag.Dev ? "thumbnail" : "thumbnaildisabled thumbnail disabled";
+
+}
+
+@section styles
+{
+    }
+    <div class="indxLft2">
+        <div class="overview">
+            <h2>Project Status</h2>
+            <br />
+            <p>
+                Information related to the rollout of the Competency-based Training System (CBTS). 
+            </p>
+        </div>
+    </div>
+   
+
+
+<div class="pagecontent1">
+    <h3>Curriculum:</h3>
+    <h4>IWT Modules:</h4>
+    <p>♦ Transitioning to Leadership and Leadership vs. Management ♦ Planning, Assisting, Controlling, &
+  Evaluating (P.A.C.E.) and Delegation ♦ Motivation & Empowerment and Motivating Your Employees
+        ♦ Setting Goals and Providing Feedback ♦ Defining Your Personal Leadership Style and Time
+  Management
+</p>
+    <h4>Residential:</h4>
+    <p>
+        ♦ Leadership Roles ♦ Emotional Intelligence ♦ 4 Disciplines of Execution ♦ Applying Equal Employment
+        Opportunity (EEO) ♦ Human Resource Management: Labor Relations and Employee Relations
+        ♦ Performance Management
+
+    </p>
+
+    <h3>Requirements:</h3>
+
+    <p>♦ Complete all five (5) self-paced modules of the NSSST as a pre-requisite for enrollment into SMT-IWT. <br/>♦ Complete all five (5) IWT modules as a pre-requisite for admission into the Residential session. ♦ Complete the SMT five (5) day Residential session.</p>
+
+    <h3>Contact Us:</h3>
+
+    <p>For more information please contact the SMT Program Manager, Tony Hill, at 410-230-4450.</p>
+
+    </div>
+
+    @section scripts
+    {
+        <script language="javascript">
+            $(document).ready(function() {
+                var $lft = $(".indxLft");
+                var $rght = $(".indxRight");
+                var hl = $lft.height();
+                var hr = $rght.height();
+                var bp;
+
+                if (hl > hr) {
+
+                    $rght.height(hl);
+
+                } else if (hr > hl) {
+                    bp = hr - hl;
+                    $lft.height(hr);
+                    $lft.css("background-position-y", bp);
+                }
+
+            });
+
+        </script>
+
+    }
+=======
+﻿@using System.Web.Hosting
+@using CBTS.Models
+@{
+    ViewBag.Title = "VBA CBTS";
+    var tilestyle = ViewBag.Dev ? "thumbnail" : "thumbnaildisabled thumbnail disabled";
+
+}
+
+@section styles
+{
+    }
+    <div class="indxLft2">
+        <div class="overview">
+            <h2>Project Status</h2>
+            <br />
+            <p>
+                Information related to the rollout of the Competency-based Training System (CBTS). 
+            </p>
+        </div>
+    </div>
+   
+
+
+<div class="pagecontent1">
+   <br />
+    <br />
+    <p>The VBA Competency-based Training Systems (CBTS) is currently under development. The CBTS is scheduled to launch in early 2015 as a collaboration with VR&E Service. 
+</p>
+   
+
+    </div>
+
+    @section scripts
+    {
+        <script language="javascript">
+            $(document).ready(function() {
+                var $lft = $(".indxLft");
+                var $rght = $(".indxRight");
+                var hl = $lft.height();
+                var hr = $rght.height();
+                var bp;
+
+                if (hl > hr) {
+
+                    $rght.height(hl);
+
+                } else if (hr > hl) {
+                    bp = hr - hl;
+                    $lft.height(hr);
+                    $lft.css("background-position-y", bp);
+                }
+
+            });
+
+        </script>
+
+    }
+>>>>>>> .r746

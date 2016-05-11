@@ -1,0 +1,152 @@
+﻿@using System.Web.Hosting
+@using CBTS.Models
+@{
+    ViewBag.Title = "VBA CBTS";
+    var tilestyle = ViewBag.Dev ? "thumbnail" : "thumbnaildisabled thumbnail disabled";
+
+}
+
+@section styles
+{
+    <style>
+        .indxLft {
+            overflow: hidden;
+        }
+    </style>
+
+}
+<div class="indxLft">
+    <!--///////////////// CAROUSEL ///////////////-->
+    <div class="carousel slide" id="theCarousel"
+         data-interval="10000">
+
+        <ol class="carousel-indicators">
+            <li data-target="#theCarousel" data-slide-to="0"
+                class="active"></li>
+            <li data-target="#theCarousel" data-slide-to="1">
+            </li>
+            <li data-target="#theCarousel" data-slide-to="2">
+            </li>
+            <li data-target="#theCarousel" data-slide-to="3">
+            </li>
+            <li data-target="#theCarousel" data-slide-to="4">
+            </li>
+            <li data-target="#theCarousel" data-slide-to="5">
+            </li>
+        </ol>
+
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="~/Images/Staff/Academy/Douglas-Hemphill.jpg" alt="Mr. Douglas Hemphill - Academy Director"
+                     class="img-responsive" />
+                <div class="carousel-caption">
+                    <h4>Mr. Douglas Hemphill</h4>
+                    <p>Academy Director</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="~/Images/Staff/Academy/Anthony-Hill.jpg" alt="Anthony Hill - Instructional Systems Specialist"
+                     class="img-responsive" />
+                <div class="carousel-caption">
+                    <h4>Anthony Hill</h4>
+                    <p>Instructional Systems Specialist</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="~/Images/Staff/Academy/Cheryl-Sherrell.jpg" alt="Ms. Cheryl Sherrell - Instructional Systems Specialist"
+                     class="img-responsive" />
+                <div class="carousel-caption">
+                    <h4>Ms. Cheryl Sherrell</h4>
+                    <p>Instructional Systems Specialist</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="~/Images/Staff/Academy/Darrian-Ward.jpg" alt="Mr. Darrian Ward - Multi-Media Analyst"
+                     class="img-responsive" />
+                <div class="carousel-caption">
+                    <h4>Mr. Darrian Ward</h4>
+                    <p>Multi-Media Analyst</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="~/Images/Staff/Academy/Jim-Bloomquist.jpg" alt="Mr. Jim Bloomquist - Multi-Media Analyst"
+                     class="img-responsive" />
+                <div class="carousel-caption">
+                    <h4>Mr. Jim Bloomquist</h4>
+                    <p>Multi-Media Analyst</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="~/Images/Staff/Academy/Nichole-Carrera.jpg" alt="Mrs. Nichole Carrera- Program Specialist"
+                     class="img-responsive" />
+                <div class="carousel-caption">
+                    <h4>Mrs. Nichole Carrera</h4>
+                    <p>Program Specialist</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="#theCarousel" class="carousel-control left"
+           data-slide="prev">
+            <span class="icon-prev">
+            </span>
+        </a>
+        <a href="#theCarousel" class="carousel-control right"
+           data-slide="next">
+            <span class="icon-next">
+            </span>
+        </a>
+    </div>
+
+    <!--///////////////// CAROUSEL END ///////////////-->
+</div>
+<div class="indxRight">
+    <div class="mission_header">
+        <p>MISSION</p>
+    </div>
+    <div class="mission_body">
+        <p>To provide relevant and useful developmental training to VBA employees who seek to enhance their individual development and who seek to increase their contribution to the Organization.</p>
+
+    </div>
+
+    <div class="mission_header">
+        <p>MOTTO</p>
+    </div>
+
+    <div class="mission_body">
+        <p>“Leadership and learning are indispensable of each other” –John F. Kennedy</p>
+    </div>
+
+
+
+</div>
+
+
+
+@section scripts
+    {
+    <script language="javascript">
+        $(document).ready(function () {
+
+
+            var $lft = $(".indxLft");
+            var $rght = $(".indxRight");
+            var hl = $lft.height();
+            var hr = $rght.height();
+            var bp;
+
+            if (hl > hr) {
+
+                $rght.height(hl);
+
+            } else if (hr > hl) {
+                bp = hr - hl;
+                $lft.height(hr);
+                $lft.css("background-position-y", bp);
+            }
+
+        });
+
+    </script>
+
+}

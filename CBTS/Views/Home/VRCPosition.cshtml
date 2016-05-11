@@ -1,0 +1,183 @@
+﻿@using System.Web.Hosting
+@using CBTS.Models
+@{
+    ViewBag.Title = "VBA CBTS";
+    var tilestyle = ViewBag.Dev ? "thumbnail" : "thumbnaildisabled thumbnail disabled";
+
+}
+
+@section styles
+{
+    }
+    <div class="indxLft2">
+        <div class="overview" id="home">
+            <h2>VRC</h2>
+            <br />
+            <p>
+               TBD
+            </p>
+        </div>
+    </div>
+   
+
+
+<div class="pagecontent1">
+    <br />
+    
+
+    <br />
+    <div class="glossarytable">
+        <table>
+            <thead>
+                <tr>
+                    <th style="border: solid thin; text-align:center">VRC Testlet Title</th>
+                    <th style="border: solid thin; text-align: center">KSAs</th>
+                    <th style="border: solid thin; text-align: center">Approximate # of assessment questions</th>
+                </tr>
+            </thead>
+            <tr>
+                <td width="15%"><strong>Vocational Assessment and Evaluation 1</strong></td>
+                <td>
+                    <ul>
+                        <li>Knowledge of basic eligibility criteria</li>
+
+                        <li>Knowledge of how to develop measurable objectives</li>
+
+                        <li>Knowledge of plan types and how to develop them</li>
+                    </ul>
+</td>
+                <td>15 items</td>
+
+            </tr>
+
+            <tr>
+                <td width="15%"><strong>Vocational Assessment and Evaluation 2</strong></td>
+                <td>
+                    <ul>
+                        <li>Ability to conduct a comprehensive initial evaluation</li>
+
+                        <li>Knowledge how to conduct and interpret vocational assessments to include previous vocational test results</li>
+
+                        <li>Knowledge of how to determine appropriate frequency of case management appointments</li>
+                        <li>Knowledge of Vocational Exploration activities</li>
+                    </ul>
+                </td>
+                <td>20 items</td>
+
+            </tr>
+            <tr>
+                <td width="15%"><strong>Job Development and Placement</strong></td>
+                <td>
+                    <ul>
+                        <li>Ability to conduct a comprehensive initial evaluation</li>
+
+                        <li>Knowledge how to conduct and interpret vocational assessments to include previous vocational test results</li>
+
+                        <li>Knowledge of how to determine appropriate frequency of case management appointments</li>
+                        <li>Knowledge of Vocational Exploration activities</li>
+                    </ul>
+                </td>
+                <td>18 items</td>
+
+            </tr>
+            <tr>
+                <td width="15%"><strong>Essential Evaluation Resources</strong></td>
+                <td>
+                    <ul>
+                        <li>Ability to document determinations (e.g., VA Form 28-1902b)</li>
+
+                        <li>Knowledge of both VA and Counseling Ethics</li>
+
+                        <li>Knowledge of the Appeals Process</li>
+                        <li>Knowledge of VBA Programs and Services, Veteran Service Centers and Veteran Service Organizations</li>
+                        <li>Knowledge of what written documentation/narratives are needed</li>
+                    </ul>
+                </td>
+                <td>20 items</td>
+
+            </tr>
+
+            <tr>
+                <td width="15%"><strong>Disability Awareness and Assessment</strong></td>
+                <td>
+                    <ul>
+                        <li>Ability to determine feasibility of employability</li>
+
+                        <li>Ability to determine functional limitations and abilities</li>
+
+                        <li>Knowledge of how to obtain information to resolve accommodation and accessibility issues</li>
+                        <li>Knowledge of Independent Living Resources</li>
+                        <li>Knowledge of most common medical conditions, varying disabilities and the impact they have on a Veteran in terms of performing work</li>
+                    </ul>
+                </td>
+                <td>20 items</td>
+
+            </tr>
+
+            <tr>
+                <td width="15%"><strong>Case Management 1</strong></td>
+                <td>
+                    <ul>
+                        <li>Ability to process fiscal payments</li>
+
+                        <li>Knowledge of case management skills</li>
+
+                        <li>Knowledge of how to assign the appropriate case status</li>
+                       
+                    </ul>
+                </td>
+                <td>15 items</td>
+
+            </tr>
+
+            <tr>
+                <td width="15%"><strong>Case Management 2</strong></td>
+                <td>
+                    <ul>
+                        <li>Ability to process case closures</li>
+
+                        <li>Knowledge of how to process awards</li>
+
+                        <li>Knowledge of how to update goals in rehabilitation plan</li>
+                        <li>Knowledge of when VREO approval is required</li>
+
+                    </ul>
+                </td>
+                <td>20 items</td>
+
+            </tr>
+        </table>
+        <p><a href="#home">Back to top</a></p>
+
+    </div>
+
+    
+   
+
+    </div>
+
+    @section scripts
+    {
+        <script language="javascript">
+            $(document).ready(function() {
+                var $lft = $(".indxLft");
+                var $rght = $(".indxRight");
+                var hl = $lft.height();
+                var hr = $rght.height();
+                var bp;
+
+                if (hl > hr) {
+
+                    $rght.height(hl);
+
+                } else if (hr > hl) {
+                    bp = hr - hl;
+                    $lft.height(hr);
+                    $lft.css("background-position-y", bp);
+                }
+
+            });
+
+        </script>
+
+    }

@@ -1,0 +1,107 @@
+﻿@using System.Web.Hosting
+@using CBTS.Models
+@{
+    ViewBag.Title = "VBA CBTS";
+    var tilestyle = ViewBag.Dev ? "thumbnail" : "thumbnaildisabled thumbnail disabled";
+
+}
+
+@section styles
+{
+    @*<style>
+        .indxRight {
+            background: Url('@Url.Content("~/Images/bg-explore-form.jpg")') no-repeat left 0 ;
+            font-size: 2.3em;
+            width: 276px;
+            text-align: center;
+            float: right;
+        }
+    </style>*@
+
+    }
+    <div class="indxLft">
+        <div class="overview">
+            <h2>OVERVIEW</h2>
+            <br />
+            <p>
+                The Assistant Director Development Program (ADDP) is a national leadership development program for current GS13-15 employees within the various business lines and staff offices of the Veterans Benefits Administration (VBA).  This program seeks to prepare participants for Assistant Director (AD) positions in our Field and Central Offices.  Participants engage in a comprehensive curriculum that includes building foundational leadership skills through the use of the Situational Leadership Model, scenario-based activities, and detail assignments that further develop and sharpen leadership capabilities within the individual.  This program places emphasis on the organizational tools required to be successful in the AD role, as participants discuss with Senior-level facilitators the importance of delegation, strategic planning, ethics, communication, and managing expectations.
+            </p>
+        </div>
+    </div>
+    <div class="indxRight">
+        <div class="learning_objectives">
+            <h2>Learning Objectives</h2>
+            <ul class="list-unstyled">
+                <li>
+                    Examine and interpret the VA leadership core competencies through the lens of Executive perspective in
+                    developmental assignments, scenario-based activities, and practical learning experiences.
+                </li>
+                <li>
+                    Develop a personal management style through peer dialogue, self-assessments, and engagement with senior
+                    leaders, while developing an understanding of the organizational expectations of the role of the AD, which will
+                    enhance the learners’ depth of knowledge and their business acumen.
+                </li>
+                <li>
+                    Discuss and defend how effective utilization of leadership concepts and organizational tools enables an AD to
+                    successfully leverage people, partnerships, and performance to achieve desired results.
+
+                </li>
+            </ul>
+
+        </div>
+        
+</div>
+
+
+<div class="pagecontent">
+    
+   
+        <h3>Foundational Models:</h3>
+     
+    <p>The Situational Leadership Model (P. Hersey & K. Blanchard);
+        <br />The TAAP Leadership Model (A. Lee)
+</p>
+
+    <h3>Foundational Text:</h3>
+
+    <p><i>The Accountable Leader</i> (K. Page); <i>Unusually Excellent</i> (J. Hamm)</p>
+
+    <h3>Curriculum:</h3>
+
+    <p>♦ VA Leadership Core Competencies ♦ Ethics & Accountability ♦ Employee & Labor Relations ♦ Political Savvy ♦ Interview Techniques ♦ Delegation & Empowerment ♦ Conflict Mediation ♦ Succession Planning ♦ Self-Assessment Tools ♦ Leadership Challenge Activity ♦ Expectations in the AD Role ♦ Communication Skills ♦ Organizational Culture ♦ Strategic Planning ♦ Counseling Techniques ♦ Work/Life Balance</p>
+
+    <h3>Requirements:</h3>
+
+    <p>♦ Foundations Week ♦ Assessment Week ♦ Executive Week ♦ Leadership Assessment Seminar ♦ Submit an Individual Development Plan ♦ Participate in a Mentoring Relationship ♦ Complete Virtual Intercessions ♦ Complete Conflict Mediation Training ♦ Complete 40-hour Shadowing Experience ♦ Complete at least 90 days on Developmental Details ♦ Complete Virtual Training Courses ♦ Present Capstone Project ♦ Submit Formal Capstone Paper</p>
+
+    <h3>Contact Us:</h3>
+
+    <p>For more information please contact the ADDP Program Manager, Derek Lambert, at 202-461-9147.</p>
+
+    </div>
+
+    @section scripts
+    {
+        <script language="javascript">
+            $(document).ready(function() {
+                var $lft = $(".indxLft");
+                var $rght = $(".indxRight");
+                var hl = $lft.height();
+                var hr = $rght.height();
+                var bp;
+
+                if (hl > hr) {
+
+                    $rght.height(hl);
+
+                } else if (hr > hl) {
+                    bp = hr - hl;
+                    $lft.height(hr);
+                    $lft.css("background-position-y", bp);
+                }
+
+            });
+
+        </script>
+
+    }

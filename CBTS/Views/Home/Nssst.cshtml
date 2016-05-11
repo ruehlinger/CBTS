@@ -1,0 +1,86 @@
+﻿@using System.Web.Hosting
+@using CBTS.Models
+@{
+    ViewBag.Title = "VBA CBTS";
+    var tilestyle = ViewBag.Dev ? "thumbnail" : "thumbnaildisabled thumbnail disabled";
+
+}
+
+@section styles
+{
+
+
+    }
+    <div class="indxLft">
+        <div class="overview">
+            <h2>OVERVIEW</h2>
+            <br />
+            <p>
+                The New Supervisor Soft-Skills Training (NSSST) Course is a 20-hour web-based training program providing all new VBA supervisors with critical training that assists them in successfully navigating their new role.  This course consists of five (5) self-paced modules within the VA Talent Management System (TMS) under Curriculum ID VBA-505.  This training must be completed within the first week of the employee’s appointment to their new supervisory position.  The NSSST Course is a pre-requisite for enrollment into the Supervisory Management Training (SMT) course.  A pre- and post-test is administered in NSSST to assess the degree of learning.
+            </p>
+        </div>
+    </div>
+    <div class="indxRight">
+        <div class="learning_objectives">
+            <h2>Learning Objectives</h2>
+            <ul class="list-unstyled">
+                <li>
+                    Provide timely soft-skills training that new supervisors within VBA need in order to lead their teams
+                    effectively.
+                </li>
+                <li>Establish a supervisory knowledge base that builds towards the competencies identified in the
+      Supervisory Management Training course.
+</li>
+            </ul>
+
+        </div>
+        
+</div>
+
+
+<div class="pagecontent">
+    
+   
+        
+
+    <h3>Curriculum:</h3>
+    <p><i>TMS Modules:</i></p>
+    <p>♦ VBA-506: Effective Communications ♦ VBA-507: Team Building ♦ VBA-508: Interpersonal Skills ♦ VBA-510: Critical Thinking ♦ VBA-511: Emotional Intelligence
+</p>
+    
+
+    <h3>Requirements:</h3>
+
+    <p>♦ Complete all five (5) self-paced modules of the NSSST as a pre-requisite for enrollment into SMT-IWT</p>
+
+    <h3>Contact Us:</h3>
+
+    <p>For more information please contact the NSSST Program Manager, Darrian Ward, at 410-230-4450.</p>
+
+    </div>
+
+    @section scripts
+    {
+        <script language="javascript">
+            $(document).ready(function() {
+                var $lft = $(".indxLft");
+                var $rght = $(".indxRight");
+                var hl = $lft.height();
+                var hr = $rght.height();
+                var bp;
+
+                if (hl > hr) {
+
+                    $rght.height(hl);
+
+                } else if (hr > hl) {
+                    bp = hr - hl;
+                    $lft.height(hr);
+                    $lft.css("background-position-y", bp);
+                }
+
+            });
+
+        </script>
+
+    }

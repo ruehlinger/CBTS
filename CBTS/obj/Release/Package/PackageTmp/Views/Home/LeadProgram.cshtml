@@ -1,0 +1,104 @@
+﻿@using System.Web.Hosting
+@using CBTS.Models
+@{
+    ViewBag.Title = "VBA CBTS";
+    var tilestyle = ViewBag.Dev ? "thumbnail" : "thumbnaildisabled thumbnail disabled";
+
+}
+
+@section styles
+{
+
+
+    }
+   <div class="indxLft">
+    <div class="overview">
+        <h2>OVERVIEW</h2>
+        <br />
+        <p>
+            The Leadership Enhancement and Development (LEAD) Program is designed as a national leadership development program for current GS9-12 employees within various business lines and staff offices of the Veterans Benefits Administration (VBA).  This program seeks to enhance and develop individual leadership capabilities through a team-centric, collaborative approach.  Participants are assigned to teams, develop project charters, create work process structures, and design project timelines as they cultivate relationships through the lens of the Tuckman Group & Team Development Model.
+        </p>
+    </div>
+</div>
+<div class="indxRight">
+    <div class="learning_objectives">
+        <h2>Learning Objectives</h2>
+        <ul class="list-unstyled">
+            <li>
+                Explain and demonstrate the VA mission, vision, core values, and leadership core competencies
+                through scenario-based activities and project development.
+            </li>
+            <li>
+                Design and implement an individual development plan using the knowledge gained from personal
+                assessment tools, practical learning experiences, mentoring, and shadowing experiences.
+            </li>
+            <li>
+                Increase global perspective through participation in residential and virtual training sessions that
+                introduce the functionality of VBA business lines and orientation to other VA administrations.
+            </li>
+            <li>
+                Identify key elements for effective team building to promote cohesion and productivity while applying
+                conflict resolution strategies to mitigate potential challenges among team members.
+
+            </li>
+        </ul>
+
+    </div>
+
+</div>
+
+
+<div class="pagecontent">
+
+    <h3>Foundational Models:</h3>
+
+    <p>
+        Tuckman Group & Team Development Model (B. Tuckman & M. Jensen)
+    </p>
+
+    <h3>Foundational Text:</h3>
+
+    <p><i>Leading Your Team</i> (A. Leigh & M. Maynard)</p>
+
+
+    <h3>Curriculum:</h3>
+    <p>♦ VA Leadership Core Competencies ♦ Project Management ♦ Tuckman Stages of Group & Team Development ♦ Interpersonal Skills – DISC Assessment ♦ Political Savvy ♦ Critical Thinking ♦ Team Building ♦ Congressional and Legislative Affairs</p>
+
+    <h3>Requirements:</h3>
+
+    <p>
+        ♦ Foundations Week ♦ Assessment Week ♦ Capstone Week ♦ Leadership Assessment Seminar
+        ♦ Participate in Monthly Counseling Sessions ♦ Complete 360-Degree Assessment ♦ Participate in Individual Sessions ♦ Complete Myers Briggs Type Indicator (MBTI) Assessment
+    </p>
+
+    <h3>Contact Us:</h3>
+
+    <p>For more information please contact the ELCP Program Manager, JD Dominick, at 202-461-9866.</p>
+
+</div>
+
+@section scripts
+    {
+    <script language="javascript">
+        $(document).ready(function () {
+            var $lft = $(".indxLft");
+            var $rght = $(".indxRight");
+            var hl = $lft.height();
+            var hr = $rght.height();
+            var bp;
+
+            if (hl > hr) {
+
+                $rght.height(hl);
+
+            } else if (hr > hl) {
+                bp = hr - hl;
+                $lft.height(hr);
+                $lft.css("background-position-y", bp);
+            }
+
+        });
+
+    </script>
+
+}

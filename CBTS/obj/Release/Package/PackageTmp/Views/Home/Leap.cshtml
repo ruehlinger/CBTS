@@ -1,0 +1,112 @@
+﻿@using System.Web.Hosting
+@using CBTS.Models
+@{
+    ViewBag.Title = "VBA CBTS";
+    var tilestyle = ViewBag.Dev ? "thumbnail" : "thumbnaildisabled thumbnail disabled";
+
+}
+
+@section styles
+{
+    @*<style>
+        .indxRight {
+            background: Url('@Url.Content("~/Images/bg-explore-form.jpg")') no-repeat left 0 ;
+            font-size: 2.3em;
+            width: 276px;
+            text-align: center;
+            float: right;
+        }
+    </style>*@
+
+    }
+    <div class="indxLft">
+        <div class="overview">
+            <h2>OVERVIEW</h2>
+            <br />
+            <p>
+                The Leadership Enrichment and Progression (LEAP) Program (formerly LDP) is designed as a national leadership development program for current GS12-14 employees within the various business lines and staff offices of the Veterans Benefits Administration (VBA).  This program seeks to enrich the participants’ leadership knowledge and competencies by engaging them in critical thought, independent and group learning activities, as well as ongoing writing assignments.  This program places emphasis on the individual leader, as participants will reflect and analyze their leadership style and job functionalities in conjunction with their personal career development plans.  Throughout the duration of the program, the participant will be responsible for completing a Capstone project that encapsulates the knowledge gained and lessons learned during the program.
+            </p>
+        </div>
+    </div>
+    <div class="indxRight">
+        <div class="learning_objectives">
+            <h2>Learning Objectives</h2>
+            <ul class="list-unstyled">
+                <li>
+                    Discuss and analyze the VA leadership core competencies through the application of varying leadership
+                    development learning activities, a self-assessment project, and additional professional development
+                    experiences.
+
+                </li>
+                <li>Develop an increased awareness of organizational culture, agency expectations, and change management
+      through engagement with Senior Managers and exposure to VBA business operations.
+
+</li>
+                <li>
+                    Describe and demonstrate The Situational Leadership Model through developmental opportunities, practical
+                    learning experiences, and scenario-based activities.
+
+                </li>
+            </ul>
+
+        </div>
+        
+</div>
+
+
+<div class="pagecontent">
+    
+    <h3>Foundational Models:</h3>
+
+    <p>
+        The Situational Leadership Model (P. Hersey & K. Blanchard)
+    </p>
+
+    <h3>Foundational Text:</h3>
+
+    <p><i>The Leadership Challenge</i> (J. Kouzes & B. Posner)</p>
+        
+
+    <h3>Curriculum:</h3>
+   
+    <p>♦ VA Leadership Core Competencies ♦ Business Acumen ♦ Human & Labor Relations ♦ Performance-based Interview Techniques ♦ Management Style ♦ Negotiation and Conflict Resolution ♦ Recognizing and Rewarding Employees ♦ Self-Assessment Tools ♦ Leadership Challenge Activity ♦ Global Perspective ♦ Executive-level Briefing Techniques ♦ VBA Budget Overview ♦ Political Aspects of VBA
+</p>
+   
+
+    <h3>Requirements:</h3>
+
+    <p>♦ Foundations Week ♦ Assessment Week ♦ Executive Week ♦ Leadership Assessment Seminar ♦ Complete 2 Senior Leadership Interviews ♦ Submit an Individual Development Plan ♦ Participate in a Mentoring Relationship ♦ Complete Virtual Intercessions ♦ Complete 2-week Rotational Assignment ♦ Complete a 40-hour Shadowing Experience ♦ Complete a 30-day Developmental Detail ♦ Complete Virtual Training Courses
+        ♦ Present Capstone Project ♦ Submit Formal Capstone Paper
+</p>
+
+    <h3>Contact Us:</h3>
+
+    <p>For more information please contact the LEAP Program Manager, Onika Coke-Muñoz, at 202-461-9494.</p>
+
+    </div>
+
+    @section scripts
+    {
+        <script language="javascript">
+            $(document).ready(function() {
+                var $lft = $(".indxLft");
+                var $rght = $(".indxRight");
+                var hl = $lft.height();
+                var hr = $rght.height();
+                var bp;
+
+                if (hl > hr) {
+
+                    $rght.height(hl);
+
+                } else if (hr > hl) {
+                    bp = hr - hl;
+                    $lft.height(hr);
+                    $lft.css("background-position-y", bp);
+                }
+
+            });
+
+        </script>
+
+    }

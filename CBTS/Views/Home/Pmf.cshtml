@@ -1,0 +1,103 @@
+﻿@using System.Web.Hosting
+@using CBTS.Models
+@{
+    ViewBag.Title = "VBA CBTS";
+    var tilestyle = ViewBag.Dev ? "thumbnail" : "thumbnaildisabled thumbnail disabled";
+
+}
+
+@section styles
+{
+
+    }
+    <div class="indxLft">
+        <div class="overview">
+            <h2>OVERVIEW</h2>
+            <br />
+            <p>
+                The Presidential Management Fellows (PMF) Program is designed as a national leadership development program administered by the Office of Personnel Management (OPM).  This leadership program seeks to promote and enhance leadership characteristics through a two-year Federal Government fellowship to individuals who have completed an advanced degree program from an accredited college or university.  Finalists have twelve (12) months to be appointed to a vacancy at the GS9-12 grade level in excepted service, and then must complete all program requirements by the end of the two years for eligibility to be non-competitively appointed to a full-time permanent position.
+            </p>
+        </div>
+    </div>
+    <div class="indxRight">
+        <div class="learning_objectives">
+            <h2>Learning Objectives</h2>
+            <ul class="list-unstyled">
+                <li>
+                    Identify and discuss the VA mission, vision, core values, and leadership core competencies, and how
+                    they shape the culture and structure of the organization.
+
+                </li>
+                <li>Create and fulfill an individual development plan that focuses on career goals using the knowledge
+      gained from personal experiences, professional growth, mentoring, and developmental opportunities.
+
+</li>
+
+                <li>
+                    Enhance leadership skills through participation in residential and virtual training sessions, involvement
+                    in developmental and educational activities, and networking with Fellows and organizational leaders.
+
+                </li>
+            </ul>
+
+        </div>
+        
+</div>
+
+
+<div class="pagecontent">
+    
+   
+    <h3>Foundational Models:</h3>
+
+    <p>
+        Government Succession Model (OPM); VA Leadership Core Competencies
+    </p>
+
+    <h3>Foundational Text:</h3>
+
+    <p><i>The Mentee’s Guide</i> (L. Phillips-Jones); <i>Never Eat Alone</i> (K. Ferrazzi & T. Raz); <i>First 90 Days in Government</i> (P. Daly & M. Watkins)</p>
+
+
+    <h3>Curriculum:</h3>
+    
+    <p>♦ VA Core Values ♦ VA Leadership Core Competencies ♦ VA-Focused Leadership Training ♦ Collaborative Communication ♦ VA Business Lines Overview ♦ Organizational Savvy ♦ Career Development ♦ PMF Conversion Process ♦ Organizational Culture ♦ Professional Imagery ♦ Partnering & Networking
+        ♦ Mentoring Action Plans ♦ Generational Diversity ♦ Federal Budget Training ♦ Technical Training
+
+</p>
+
+    <h3>Requirements:</h3>
+
+    <p>♦ Orientation Session ♦ Assessment Session ♦ Executive Session ♦ Complete an Individual Development Plan ♦ Participate in a Mentoring Relationship ♦ Receive 80 hours of Formal Classroom Training per Year (160 hours total) ♦ Complete a 4-6 month Developmental Assignment ♦ Receive Annual Performance Plan and Successful Review ♦ Certification of Successful Completion by Executive Resources Board (ERB)</p>
+
+    <h3>Contact Us:</h3>
+
+    <p>For more information please contact the PMF Program Manager, Abolade Thomas-Nibblett, at 202-461-9934.</p>
+
+    </div>
+
+    @section scripts
+    {
+        <script language="javascript">
+            $(document).ready(function() {
+                var $lft = $(".indxLft");
+                var $rght = $(".indxRight");
+                var hl = $lft.height();
+                var hr = $rght.height();
+                var bp;
+
+                if (hl > hr) {
+
+                    $rght.height(hl);
+
+                } else if (hr > hl) {
+                    bp = hr - hl;
+                    $lft.height(hr);
+                    $lft.css("background-position-y", bp);
+                }
+
+            });
+
+        </script>
+
+    }

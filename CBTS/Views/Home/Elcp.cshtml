@@ -1,0 +1,110 @@
+﻿@using System.Web.Hosting
+@using CBTS.Models
+@{
+    ViewBag.Title = "VBA CBTS";
+    var tilestyle = ViewBag.Dev ? "thumbnail" : "thumbnaildisabled thumbnail disabled";
+
+}
+
+@section styles
+{
+    @*<style>
+        .indxRight {
+            background: Url('@Url.Content("~/Images/bg-explore-form.jpg")') no-repeat left 0 ;
+            font-size: 2.3em;
+            width: 276px;
+            text-align: center;
+            float: right;
+        }
+    </style>*@
+
+    }
+    <div class="indxLft">
+        <div class="overview">
+            <h2>OVERVIEW</h2>
+            <br />
+            <p>
+                The Executive Leadership Coaching Program (ELCP) (formerly LCP) is designed as a national leadership development program for current GS13-15 employees within the various business lines and staff offices of the Veterans Benefits Administration (VBA).  This program seeks to provide recently selected Regional, Area, and Central Office Division-Level Managers with timely executive coaching, leadership development, and managerial training.   This program places emphasis on the development of the individual as a new senior leader.  Participants will discuss and reflect on organizational performance, communication, problem solving, and conflict management.  Participants are afforded the opportunity to identify developmental needs, as well as strategize and address current work challenges through dialogue and reflection on executive- and peer-level feedback from group sessions and individual coaching sessions with an executive coach. 
+            </p>
+        </div>
+    </div>
+    <div class="indxRight">
+        <div class="learning_objectives">
+            <h2>Learning Objectives</h2>
+            <ul class="list-unstyled">
+                <li>
+                    Develop and cultivate interpersonal relationships as a means to foster leadership development and
+                    professional growth while increasing awareness and understanding of organizational culture.
+
+                </li>
+                <li>Design and execute a professional development strategy through dialogue with an executive coach,
+      insights from self-assessment tools, and reflection on personal and professional challenges.
+
+</li>
+                <li>
+                    Identify and explain the VA Leadership Core Competencies from the senior leader perspective and how
+                    they affect the organization’s strategic goals and succession planning.
+
+                </li>
+                
+            </ul>
+
+        </div>
+        
+</div>
+
+
+<div class="pagecontent">
+    
+    <h3>Foundational Models:</h3>
+
+    <p>
+        VA Leadership Core Competencies (Dept. of Veterans Affairs)
+    </p>
+
+    <h3>Foundational Text:</h3>
+
+    <p><i>How Come Every Time I Get Stabbed in the Back My Fingerprints Are on the Knife?</i> (J. Harvey); <i>Your Leadership Legacy</i> (R. Galford & R. F. Maruca)</p>
+        
+
+    <h3>Curriculum:</h3>
+    <p>♦ VA Leadership Core Competencies ♦ Timely Leadership ♦ Leading from the Middle ♦ Managing Organizational Culture ♦ Succession Planning ♦ Negotiation Tactics ♦ Conflict Resolution ♦ Project Management ♦ Managing Expectations ♦ Leadership Challenge Activity ♦ Strategic Planning ♦ Self-Assessment Tools ♦ Career Development ♦ Senior Management Development</p>
+
+    <h3>Requirements:</h3>
+
+    <p>♦ Foundations Week ♦ Assessment Week ♦ Capstone Week ♦ Leadership Assessment Seminar
+        ♦ Participate in Monthly Counseling Sessions ♦ Complete 360-Degree Assessment ♦ Participate in Individual Sessions ♦ Complete Myers Briggs Type Indicator (MBTI) Assessment
+
+</p>
+
+    <h3>Contact Us:</h3>
+
+    <p>For more information please contact the ELCP Program Manager, JD Dominick, at 202-461-9866.</p>
+
+    </div>
+
+    @section scripts
+    {
+        <script language="javascript">
+            $(document).ready(function() {
+                var $lft = $(".indxLft");
+                var $rght = $(".indxRight");
+                var hl = $lft.height();
+                var hr = $rght.height();
+                var bp;
+
+                if (hl > hr) {
+
+                    $rght.height(hl);
+
+                } else if (hr > hl) {
+                    bp = hr - hl;
+                    $lft.height(hr);
+                    $lft.css("background-position-y", bp);
+                }
+
+            });
+
+        </script>
+
+    }

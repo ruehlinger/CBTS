@@ -1,0 +1,101 @@
+﻿@using System.Web.Hosting
+@using CBTS.Models
+@{
+    ViewBag.Title = "VBA CBTS";
+    var tilestyle = ViewBag.Dev ? "thumbnail" : "thumbnaildisabled thumbnail disabled";
+
+}
+
+@section styles
+{
+}
+<!-- <div class="indxLft2">
+     <div class="overview">
+         <h2>Calendar</h2>
+         <br />
+         <p>
+             The Calendar page hosts events that are upcoming
+         </p>
+     </div>
+ </div>-->
+
+
+
+<div class="pagecontent1">
+
+
+    <br />
+    <p>Home > My Role Is > Training Manager</p>
+
+    <h3>Your Role:</h3>
+
+    <p>TBD</p>
+
+
+    <h4><a href="#">CBTS Checklist</a></h4>
+
+    <p>The checklist provides a list of the items that should be completed by the training manager as part of the VBAs Competency-based Training System. </p>
+
+    <h4><a href="#">Mentoring Tools</a></h4>
+
+    <p>TBD</p>
+
+
+
+    <h4><a href="#">TMS</a></h4>
+
+    <p>Access TMS to do the following: </p>
+    <ul>
+        <li>Review employee diagnostic assessment completion status</li>
+        <li>Assign employee specific training items</li>
+        <li>Review employee training progress</li>
+        <li>Review training progress</li>
+        <li>Access reports</li>
+        <li>Training Roadmaps</li>
+    </ul>
+
+
+    <h4><a href="~/Home/TrainingRoadmap/">Training Roadmap</a></h4>
+
+    <p>
+        This page provides a list of training topics that are aligned with the position-specific competencies.
+       
+    </p>
+
+  
+
+    <h4><a href="#">Skills Certification Announcements</a></h4>
+
+    <h4><a href="#">Forms</a></h4>
+
+  
+
+
+
+</div>
+
+@section scripts
+    {
+    <script language="javascript">
+        $(document).ready(function () {
+            var $lft = $(".indxLft");
+            var $rght = $(".indxRight");
+            var hl = $lft.height();
+            var hr = $rght.height();
+            var bp;
+
+            if (hl > hr) {
+
+                $rght.height(hl);
+
+            } else if (hr > hl) {
+                bp = hr - hl;
+                $lft.height(hr);
+                $lft.css("background-position-y", bp);
+            }
+
+        });
+
+    </script>
+
+}
